@@ -4,25 +4,251 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="Style1.css">
-  <title>Document</title>
+  <title>Выбор уровня</title>
 </head>
-<body class="page">
+<body>
+    <nav class="navbar">
+			<div class="navbar-container container">
+				<input type="checkbox">
+				<div class="hamburger-lines">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</div>
+				<ul class="menu-items">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="#">О квесте</a></li>
+					<li><a href="#">Уровни</a></li>
+          <li><a href="#" id="regBtn">Авторизация</a></li>
+				</ul>
+				<h1 class="logo"><img class="logo" src="img/logo.png" alt=""></h1>
+			</div>
+		</nav>
 
-    <div class="Container">
+<div class="container">  <!--Пробел между карточками-->
+  <div class="spaceSmal"></div>
+</div>
+<div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+</div>
+    <div class="container"><h2>Выбор уровня</h2></div>
+<div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+</div>
 
-          <div class="TerminalBig"><div class="Head"></div></div>
-          <div class="SpaceBig"></div>
-          <div class="TerminalMidle"><div class="Head"></div></div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+        <div class="service-wrapper">
 
+          <div class="TitleWindow"> <!--Заголовок "консоли"-->
+            <h3>XSS Атака</h3>
+            <div class="Design"> <!--Элементы дизайна-->
+              <p>File</p>
+              <p>Edit</p>
+              <p>View</p>
+            </div>
+          </div>
+
+          <div class="ConsoleWindow">  <!--текст в консоли-->
+            <p>Веб-вест это обучающая онлайн игра, которая может применятся в образовательных учреждениях в качестве учебно-практического материала, который будет интересен и доступен для учеников</p>
+            <p><u>Область применения веб квестов безгранична!</u></p>
+          </div>
+
+        </div>
+      </div>
+      
+
+      <div class="col-md-1 col-sm-12">
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="service-wrapper">
+          <div class="TitleWindow">
+            <h3>Инъекции</h3>
+            <div class="Design">
+              <p>File</p>
+              <p>Edit</p>
+              <p>View</p>
+              <p>Search</p>
+              <p>Terminal</p>
+            </div>
+          </div>
+          <div class="ConsoleWindow">
+            <img src="img/146.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="ContainerBotom">
-      <div class="Help"><div class="Head"></div></div>
-      <div class="Space"></div>
-      <div class="FileSystem"><div class="HeadFileSystem"></div></div>
-      <div class="Space"></div>
-      <div class="Start"><div class="Head"></div></div>
+  </div>
+</div>
+
+
+<div class="container">  <!--Пробел между карточками-->
+<div class="space"></div>
+</div>
+
+<div class="section">
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6 col-sm-12">
+      <div class="service-wrapper">
+        <div class="TitleWindow">
+          <h3>Broken Authentication</h3>
+          <div class="Design">
+            <p>File</p>
+            <p>Edit</p>
+            <p>View</p>
+            <p>Search</p>
+            <p>Terminal</p>
+          </div>
+        </div>
+        <div class="ConsoleWindow" >
+          <p>Данный квест был разработан с целью обучения будущих специалистов и повышения компетеции уже действующих работников в сфере обеспечения безопасности</p>
+          <p style="margin: 0;">Лучший способ изучить методы защиты, это вжится в роль своего соперника. Сегодня вам предстоит стать хакером и исследовать уязвимости веб-сайта</p>
+        </div>
+      </div>
     </div>
 
+    <div class="col-md-1 col-sm-12" id="spacecard">
+    </div>
+
+    <div class="col-md-5 col-sm-12">
+      <div class="service-wrapper">
+
+        <div class="TitleWindow"> <!--Заголовок "консоли"-->
+          <h3>Небезопасная конфигурация</h3>
+          <div class="Design"> <!--Элементы дизайна-->
+            <p>File</p>
+            <p>Edit</p>
+            <p>View</p>
+          </div>
+        </div>
+
+        <div class="ConsoleWindow">  <!--текст в консоли-->
+          <p>Интересный факт: Существует профессия, сутью которой является взлом приложений компании в которой и состоит работник</p>
+          <p>Такого человека называют <u style="cursor: pointer;"> Этичным хакером</u> и его цель не нанося урон компании проверять безопасность</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">  <!--Пробел между карточками-->
+  <div class="space"></div>
+  </div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+  
+      <div class="col-md-5 col-sm-12">
+        <div class="service-wrapper">
+          <div class="TitleWindow">
+            <h3>LFI/RFI</h3>
+            <div class="Design">
+              <p>File</p>
+              <p>Edit</p>
+              <p>View</p>
+            </div>
+          </div>
+          <div class="ConsoleWindow" >
+            <p>Данный квест был разработан с целью обучения будущих специалистов и повышения компетеции уже действующих работников в сфере обеспечения безопасности</p>
+            <p style="margin: 0;">Лучший способ изучить методы защиты, это вжится в роль своего соперника. Сегодня вам предстоит стать хакером и исследовать уязвимости веб-сайта</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-1 col-sm-12" id="spacecard">
+      </div>
+  
+      <div class="col-md-6 col-sm-12">
+        <div class="service-wrapper">
+  
+          <div class="TitleWindow"> <!--Заголовок "консоли"-->
+            <h3>SSI Injection</h3>
+            <div class="Design"> <!--Элементы дизайна-->
+              <p>File</p>
+              <p>Edit</p>
+              <p>View</p>
+              <p>Search</p>
+              <p>Terminal</p>
+            </div>
+          </div>
+  
+          <div class="ConsoleWindow">  <!--текст в консоли-->
+            <p>Интересный факт: Существует профессия, сутью которой является взлом приложений компании в которой и состоит работник</p>
+            <p>Такого человека называют <u style="cursor: pointer;"> Этичным хакером</u> и его цель не нанося урон компании проверять безопасность</p>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">  <!--Пробел между карточками-->
+    <div class="spaceSmal"></div>
+</div>
+<div class="container">  <!--Пробел между карточками-->
+  <div class="spaceSmal"></div>
+</div>
+<div class="container">  <!--Пробел между карточками-->
+  <div class="spaceSmal"></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <h3>Карта сайта</h3>
+          <p><a href="">Главная</a></p>
+          <p><a href="">Главная</a></p>
+          <p><a href="">Главная</a></p>
+          <p><a href="">Главная</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <div class="center">
+            <img src="img/logo.png" alt="" style="width: 125px; height: 125px;">
+          </div>
+          <div class="center">
+            <h3>Change the World...</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <h3>Автор</h3>
+          <p>Работу выполнил студент 3 курса <br> группы Ир3-19 <br> Платонов Антон Сергеевич </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
+    <script src="index.js"></script>
 </body>
 </html>
