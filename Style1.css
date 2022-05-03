@@ -3,6 +3,10 @@ html{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
+html::-webkit-scrollbar {
+  width: 0;
+}
+
 body
 {
     background-image: url(img/Frame\ 10\ \(4\).png);
@@ -25,6 +29,7 @@ nav
     width: 100%;
     height: 75px;
 }
+
 
 .NavContent
 {
@@ -115,6 +120,7 @@ nav
     height: 55px;
     background: #C4C4C4;
     border-radius: 20px 20px 0px 0px;
+    box-shadow: 24px 20px 19px rgba(0, 0, 0, 0.25);
 }
 
 .TitleWindow h3
@@ -155,6 +161,69 @@ nav
     width: 100%;
     background: rgba(65, 65, 65, 0.67);
     margin: 0;
+    box-shadow: 24px 20px 19px rgba(0, 0, 0, 0.25);
+    text-overflow:clip;
+    white-space:normal;
+    overflow:auto;
+    vertical-align: middle;
+}
+
+.ConsoleWindow2
+{
+    height: calc(100% - 55px);
+    width: 100%;
+    background: rgba(65, 65, 65, 0.67);
+    margin: 0;
+    box-shadow: 24px 20px 19px rgba(0, 0, 0, 0.25);
+
+}
+
+.ConsoleWindow4
+{
+    height: calc(100% - 55px);
+    width: 100%;
+    background: rgba(65, 65, 65, 0.67);
+    margin: 0;
+    box-shadow: 24px 20px 19px rgba(0, 0, 0, 0.25);
+    text-overflow:clip;
+    white-space:normal;
+    overflow:auto;
+    vertical-align: middle;
+}
+
+.ConsoleWindow4::-webkit-scrollbar
+{
+    display: none;
+}
+
+.ConsoleWindow2:hover
+{
+    color: #000000;
+    background-color: #007bff;
+
+}
+
+.ConsoleWindow2:hover > a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.ConsoleWindow2:hover > h1
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+.ConsoleWindow::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+  background-color: #223243;
+}
+
+.ConsoleWindow::-webkit-scrollbar-thumb  {
+  background-color: #007bff;
+  border-radius: 5px;
 }
 
 .ConsoleWindow p
@@ -165,12 +234,22 @@ nav
     font-size: larger;
 }
 
+.ConsoleWindow a
+{
+    text-decoration: none;
+}
+
 .ConsoleWindow img
 {
     height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+.ConsoleWindow ul li
+{
+  color: #FFFFFF;
 }
 
 .ConsoleWindow .container .row .col-sm h2
@@ -180,6 +259,7 @@ nav
     text-align: center;
     margin: 0;
 }
+
 
 .ConsoleWindow .container .row .col-sm p
 {
@@ -192,8 +272,78 @@ nav
 .center {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     padding: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+}
+
+.center3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.center2 h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+.ConsoleWindow4 textarea
+{
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-color:rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 20px;
+    padding-bottom: 0;
+    font-weight: 500;
+    font-size: larger;
+    outline: none;
+	-moz-appearance: none;
+  resize: none;
+}
+
+.ConsoleWindow4 textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+  background-color: #223243;
+}
+
+
+.ConsoleWindow4 textarea::-webkit-scrollbar-thumb  {
+  background-color: #007bff;
+  border-radius: 5px;
 }
 
 input
@@ -217,6 +367,10 @@ h6
 @media (min-width: 300px) and (max-width: 412px) {
 
     .col-md-2
+    {
+        height: 75px;
+    }
+    .col-md-1
     {
         height: 75px;
     }
@@ -264,12 +418,24 @@ h6
 }
 
 @media (min-width: 700px) and (max-width: 991px) {
+
+    .col-md-1 {
+      -ms-flex: 0 0 2.5%;
+      flex: 0 0 2.5%;
+      max-width: 2.5%;
+    } 
+  
     .col-md-2 {
         -ms-flex: 0 0 5%;
         flex: 0 0 5%;
         max-width: 5%;
     }
     .col-md-4 {
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    .col-md-5 {
         -ms-flex: 0 0 40%;
         flex: 0 0 40%;
         max-width: 40%;
@@ -312,15 +478,13 @@ h6
     }
 
     .Design {
-        display: flex;
-        width: 100%;
-        justify-content: start;
-        padding-top: 5px;
+        display: none;
     }
 
 }
 
 @media (min-width: 700px) and (max-width: 921px) {
+  
     .ConsoleWindow {
         height: auto;
     }
@@ -340,6 +504,9 @@ h6
 }
 
 @media (max-width: 699px) {
+    .col-md-1 {
+      height: 50px;
+    }
     .col-md-2 {
         height: 50px;
     }
@@ -362,6 +529,30 @@ h6
         background: rgba(65, 65, 65, 0.67);
         margin: 0;
         padding-bottom: 20px;
+        text-overflow:clip;
+        white-space:normal;
+        overflow:auto;
+        vertical-align: middle;
+    }
+
+    .btn-primary {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .btn-primary .center h2{
+      font-size: 24px;
+    }
+
+    .TitleWindow h3
+    {
+      font-size: 20px;
+    }
+
+    .Design
+    {
+      display: none;
     }
 }
 
@@ -396,12 +587,16 @@ h6
         font-size: 23px;
     }
 
-    .Design p{
-        font-size: 15px;
+    .Design{
+        display: none;
     }
 
     .ConsoleWindow {
     padding-bottom: 5px;
+    }
+
+    .btn-primary .center{
+      margin: 0;
     }
 }
 
@@ -703,6 +898,7 @@ h2 a
   height: 75px;
   z-index: 14;
   border-radius: 0;
+  box-shadow: 0px 14px 90px 100px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-container {
@@ -750,6 +946,15 @@ h2 a
 
 .logo {
   order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  width: 55px;
+  height: 55px;
+}
+
+.person
+{
+  float: right;
   font-size: 2.3rem;
   margin-bottom: 10px;
   width: 55px;

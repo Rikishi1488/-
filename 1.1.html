@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Style1.css">
+  <title>Уязвимости веб-приложений</title>
+</head>
+<body>
+  <!--Навигация-->
+    <nav class="navbar">
+			<div class="navbar-container container">
+				<input type="checkbox">
+				<div class="hamburger-lines">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</div>
+				<ul class="menu-items">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="about.html">О квесте</a></li>
+					<li><a href="lvl.html">Уровни</a></li>
+				</ul>
+				<h1 class="logo"><img class="logo" src="img/logo.png" alt=""></h1>
+			</div>
+		</nav>
+
+<div class="container">  <!--Пробел между карточками-->
+  <div class="spaceSmal"></div>
+</div>
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+    <div class="container" id="start"><h2>Denial of Service</h2></div>
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+
+    
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-12">
+            <div class="service-wrapper">
+
+              <div class="TitleWindow"> <!--Заголовок "консоли"-->
+                <h3>Задание</h3>
+                <div class="Design"> <!--Элементы дизайна-->
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                </div>
+              </div>
+
+              <div class="ConsoleWindow">  <!--текст в консоли-->
+                <p>Для начала давайте попробуем сделать отказ в обслуживании этого сайта, он распологается на IP адресе: 89.151.179.138, мы будем использовать утилиту "DDOS"</p>
+                <p>Попробуйте написать в окно "Выполнение" следующую команду "DDOS -s 89.151.179.138 -t 10" и нажмите кнопку "Начать"</p>
+              </div>
+
+            </div>
+          </div>
+          
+
+          <div class="col-md-1 col-sm-12">
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="service-wrapper">
+              <div class="TitleWindow">
+                <h3>Выполнение</h3>
+                <div class="Design">
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                  <p>Search</p>
+                  <p>Terminal</p>
+                </div>
+              </div>
+              <div class="ConsoleWindow4">
+                <textarea placeholder="Команды сюда"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">
+      <div class="center3">
+        
+        <a href="1.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Отмена</h2> 
+            </div>
+          </div>
+        </a>
+
+          <div class="btn btn-primary" id="Btn">
+            <div class="center">
+              <h2 >Начать</h2> 
+            </div>
+          </div>
+      </div>
+    </div> 
+  </div>
+</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script>
+      function sleep(ms) {
+      ms += new Date().getTime();
+      while (new Date() < ms){}
+      } 
+    $(document).ready(function() {
+        var Btn = $('#Btn');
+        
+      Btn.on('click', function(e) {
+        
+        var Text = $('textarea').val();
+        if ($('textarea').val() == "DDOS -s 89.151.179.138 -t 10")
+        {
+          sleep(2000)
+          $('textarea').val("DDOS -s 89.151.179.138 -t 10\n2%\n8%\n18%\n23%\n49%\n67%\n82%\n99%\n100%\nDone!")
+          window.location.href = '1488.html';
+        }
+        else
+        {
+          $('textarea').val("")
+        }
+
+      });
+    });
+    </script>
+</body>
+</html>

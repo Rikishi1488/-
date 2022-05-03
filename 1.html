@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="Style1.css">
-  <title>Выбор уровня</title>
+  <title>Уязвимости веб-приложений</title>
 </head>
 <body>
+  <!--Навигация-->
     <nav class="navbar">
 			<div class="navbar-container container">
 				<input type="checkbox">
@@ -19,9 +20,8 @@
 				</div>
 				<ul class="menu-items">
 					<li><a href="index.html">Главная</a></li>
-					<li><a href="#">О квесте</a></li>
-					<li><a href="#">Уровни</a></li>
-          <li><a href="#" id="regBtn">Авторизация</a></li>
+					<li><a href="about.html">О квесте</a></li>
+					<li><a href="lvl.html">Уровни</a></li>
 				</ul>
 				<h1 class="logo"><img class="logo" src="img/logo.png" alt=""></h1>
 			</div>
@@ -30,175 +30,266 @@
 <div class="container">  <!--Пробел между карточками-->
   <div class="spaceSmal"></div>
 </div>
-<div class="container">  <!--Пробел между карточками-->
+    <div class="container">  <!--Пробел между карточками-->
       <div class="spaceSmal"></div>
-</div>
-    <div class="container"><h2>Выбор уровня</h2></div>
-<div class="container">  <!--Пробел между карточками-->
+    </div>
+    <div class="container" id="start"><h2>Denial of Service</h2></div>
+    <div class="container">  <!--Пробел между карточками-->
       <div class="spaceSmal"></div>
-</div>
+    </div>
 
-<div class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-5 col-sm-12">
-        <div class="service-wrapper">
+    
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-12">
+            <div class="service-wrapper">
 
-          <div class="TitleWindow"> <!--Заголовок "консоли"-->
-            <h3>XSS Атака</h3>
-            <div class="Design"> <!--Элементы дизайна-->
-              <p>File</p>
-              <p>Edit</p>
-              <p>View</p>
+              <div class="TitleWindow"> <!--Заголовок "консоли"-->
+                <h3>Отказ в обслуживании</h3>
+                <div class="Design"> <!--Элементы дизайна-->
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                </div>
+              </div>
+
+              <div class="ConsoleWindow">  <!--текст в консоли-->
+                <p>DoS (Denial of Service или отказ в обслуживании) - хакерская атака на вычислительную систему с целью довести её до отказа, то есть создание таких условий, при которых пользователи системы не смогут получить доступ к предоставляемым системным ресурсам, либо этот доступ будет затруднён. В настоящее время DoS и DDoS-атаки наиболее популярны, так как позволяют довести до отказа практически любую плохо написанную систему, не оставляя юридически значимых улик. </p>
+              </div>
+
             </div>
           </div>
+          
 
-          <div class="ConsoleWindow">  <!--текст в консоли-->
-            <p>Веб-вест это обучающая онлайн игра, которая может применятся в образовательных учреждениях в качестве учебно-практического материала, который будет интересен и доступен для учеников</p>
-            <p><u>Область применения веб квестов безгранична!</u></p>
+          <div class="col-md-1 col-sm-12">
           </div>
 
-        </div>
-      </div>
-      
-
-      <div class="col-md-1 col-sm-12">
-      </div>
-
-      <div class="col-md-6 col-sm-12">
-        <div class="service-wrapper">
-          <div class="TitleWindow">
-            <h3>Инъекции</h3>
-            <div class="Design">
-              <p>File</p>
-              <p>Edit</p>
-              <p>View</p>
-              <p>Search</p>
-              <p>Terminal</p>
+          <div class="col-md-6 col-sm-12">
+            <div class="service-wrapper">
+              <div class="TitleWindow">
+                <h3>Выявление DoS/DDoS-атак</h3>
+                <div class="Design">
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                  <p>Search</p>
+                  <p>Terminal</p>
+                </div>
+              </div>
+              <div class="ConsoleWindow">
+                <p>Существует мнение, что специальные средства для выявления DoS-атак не требуются, поскольку факт DoS-атаки невозможно не заметить. Во многих случаях это действительно так. Однако достаточно часто наблюдались удачные DoS-атаки, которые были замечены жертвами лишь спустя 2-3 суток. Бывало, что негативные последствия атаки (флуд-атаки) выливались в излишние расходы на оплату избыточного Internet-трафика, что выяснялось лишь при получении счёта от Internet-провайдера. Кроме того, многие методы обнаружения атак неэффективны вблизи объекта атаки, но эффективны на сетевых магистральных каналах. В таком случае целесообразно ставить системы обнаружения именно там, а не ждать, пока пользователь, подвергшийся атаке, сам её заметит и обратится за помощью. К тому же для эффективного противодействия DoS-атакам необходимо знать тип, характер и другие характеристики DoS-атак, а оперативно получить эти сведения как раз и позволяют службы обеспечения безопасности. Они помогают произвести некоторые настройки системы. Но определить, была ли данная атака произведена злоумышленником, либо отказ в обслуживании был следствием нештатного события, они не могут. В соответствии с правилами политики обеспечения безопасности, при обнаружении DoS или DDoS-атаки потребуется её регистрация для дальнейшего аудита. После того, как атака была зафиксирована, могут потребоваться службы обеспечения безопасности для некоторых корректировок в системе и для её возвращения к прежнему уровню работы.</p>
+              </div>
             </div>
           </div>
-          <div class="ConsoleWindow">
-            <img src="img/146.png" alt="">
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">  <!--Пробел между карточками-->
-<div class="space"></div>
-</div>
-
-<div class="section">
-<div class="container">
-  <div class="row">
-
-    <div class="col-md-6 col-sm-12">
-      <div class="service-wrapper">
-        <div class="TitleWindow">
-          <h3>Broken Authentication</h3>
-          <div class="Design">
-            <p>File</p>
-            <p>Edit</p>
-            <p>View</p>
-            <p>Search</p>
-            <p>Terminal</p>
-          </div>
-        </div>
-        <div class="ConsoleWindow" >
-          <p>Данный квест был разработан с целью обучения будущих специалистов и повышения компетеции уже действующих работников в сфере обеспечения безопасности</p>
-          <p style="margin: 0;">Лучший способ изучить методы защиты, это вжится в роль своего соперника. Сегодня вам предстоит стать хакером и исследовать уязвимости веб-сайта</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-1 col-sm-12" id="spacecard">
-    </div>
-
-    <div class="col-md-5 col-sm-12">
-      <div class="service-wrapper">
-
-        <div class="TitleWindow"> <!--Заголовок "консоли"-->
-          <h3>Небезопасная конфигурация</h3>
-          <div class="Design"> <!--Элементы дизайна-->
-            <p>File</p>
-            <p>Edit</p>
-            <p>View</p>
-          </div>
-        </div>
-
-        <div class="ConsoleWindow">  <!--текст в консоли-->
-          <p>Интересный факт: Существует профессия, сутью которой является взлом приложений компании в которой и состоит работник</p>
-          <p>Такого человека называют <u style="cursor: pointer;"> Этичным хакером</u> и его цель не нанося урон компании проверять безопасность</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container">  <!--Пробел между карточками-->
-  <div class="space"></div>
   </div>
 
-<div class="section">
-  <div class="container">
-    <div class="row">
-  
-      <div class="col-md-5 col-sm-12">
-        <div class="service-wrapper">
-          <div class="TitleWindow">
-            <h3>LFI/RFI</h3>
-            <div class="Design">
-              <p>File</p>
-              <p>Edit</p>
-              <p>View</p>
-            </div>
-          </div>
-          <div class="ConsoleWindow" >
-            <p>Данный квест был разработан с целью обучения будущих специалистов и повышения компетеции уже действующих работников в сфере обеспечения безопасности</p>
-            <p style="margin: 0;">Лучший способ изучить методы защиты, это вжится в роль своего соперника. Сегодня вам предстоит стать хакером и исследовать уязвимости веб-сайта</p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-md-1 col-sm-12" id="spacecard">
-      </div>
-  
-      <div class="col-md-6 col-sm-12">
-        <div class="service-wrapper">
-  
-          <div class="TitleWindow"> <!--Заголовок "консоли"-->
-            <h3>SSI Injection</h3>
-            <div class="Design"> <!--Элементы дизайна-->
-              <p>File</p>
-              <p>Edit</p>
-              <p>View</p>
-              <p>Search</p>
-              <p>Terminal</p>
-            </div>
-          </div>
-  
-          <div class="ConsoleWindow">  <!--текст в консоли-->
-            <p>Интересный факт: Существует профессия, сутью которой является взлом приложений компании в которой и состоит работник</p>
-            <p>Такого человека называют <u style="cursor: pointer;"> Этичным хакером</u> и его цель не нанося урон компании проверять безопасность</p>
-          </div>
-  
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="container">  <!--Пробел между карточками-->
-    <div class="spaceSmal"></div>
-</div>
-<div class="container">  <!--Пробел между карточками-->
-  <div class="spaceSmal"></div>
-</div>
-<div class="container">  <!--Пробел между карточками-->
-  <div class="spaceSmal"></div>
+    <div class="space"></div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-sm-12">
+          <div class="service-wrapper">
+            <div class="TitleWindow">
+              <h3>Визуализация DDoS-атаки</h3>
+              <div class="Design">
+                <p>File</p>
+                <p>Edit</p>
+                <p>View</p>
+                <p>Search</p>
+                <p>Terminal</p>
+              </div>
+            </div>
+            <div class="ConsoleWindow">
+              <img style="height: fit-content; width: 100%;" src="img/DDoS_video.gif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1 col-sm-12" id="spacecard">
+        </div>
+
+        <div class="col-md-5 col-sm-12">
+          <div class="service-wrapper">
+
+            <div class="TitleWindow"> <!--Заголовок "консоли"-->
+              <h3>Защита от DDoS-атак</h3>
+              <div class="Design"> <!--Элементы дизайна-->
+                <p>File</p>
+                <p>Edit</p>
+                <p>View</p>
+              </div>
+            </div>
+
+            <div class="ConsoleWindow">  <!--текст в консоли-->
+              <p>
+                Полностью защититься от DDoS-атак на сегодняшний день невозможно, так как совершенно надёжных систем не существует. Здесь также большую роль играет человеческий фактор, потому что любая ошибка системного администратора, неправильно настроившего маршрутизатор, может привести к весьма плачевным последствиям. Однако, несмотря на всё это, на настоящий момент существует масса как аппаратно-программных средств защиты, так и организационных методов противостояния.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+        <div class="space" id="reg"></div>
+      </div>
+  
+
+    <div class="section">
+        <div class="container">
+          <div class="row">
+    
+            <div class="col-md-12 col-sm-12">
+              <div class="service-wrapper" style="width: auto;">
+                <div class="TitleWindow">
+                  <h3>Меры противодействия DDoS-атакам</h3>
+                  <div class="Design">
+                    <p>File</p>
+                    <p>Edit</p>
+                    <p>View</p>
+                    <p>Search</p>
+                    <p>Terminal</p>
+                  </div>
+                </div>
+                <div class="ConsoleWindow">
+                  <p>
+                    Меры противодействия DDoS-атакам можно разделить на пассивные и активные, а также на превентивные и реакционные. Ниже приведён краткий перечень основных методов.
+                  </p>
+                  <ul>
+                      <li>
+                        Предотвращение. Профилактика причин, побуждающих тех или иных лиц организовывать и предпринять DDoS-атаки.
+                      </li>
+                      <li>
+                        Ответные меры. Применяя технические и правовые меры, нужно как можно активнее воздействовать на источник и организатора DDoS-атаки. 
+                      </li>
+                      <li>
+                        Фильтрация и блэкхолинг. Блокирование трафика, исходящего от атакующих машин. 
+                      </li>
+                      <li>
+                        Обратный DDOS — перенаправление трафика, используемого для атаки, на атакующего.
+                      </li>
+                      <li>
+                        Рассредоточение. Построение распределённых и дублирование систем, которые не прекратят обслуживать пользователей, даже если некоторые их элементы станут недоступны из-за DoS-атаки.
+                      </li>
+                      <li>
+                        Приобретение сервиса по защите от DDoS-атак. Актуально в случае превышения флудом пропускной способности сетевого канала.
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">  <!--Пробел между карточками-->
+          <div class="space" id="reg"></div>
+        </div>
+
+        <div class="section">
+          <div class="container">
+            <div class="row">
+      
+              <div class="col-md-6 col-sm-12">
+                <div class="service-wrapper">
+                  <div class="TitleWindow">
+                    <h3>Программа для Ddos-атак по IP и URL</h3>
+                    <div class="Design">
+                      <p>File</p>
+                      <p>Edit</p>
+                      <p>View</p>
+                      <p>Search</p>
+                      <p>Terminal</p>
+                    </div>
+                  </div>
+                  <div class="ConsoleWindow">
+                    <p>Самой распространенной подобной программой является LOIC. Это не какая-то сверхсекретная утилита из darknet — это приложение есть в открытом доступе, и, в принципе, любой желающий может его скачать и использовать.</p>
+                    <p>Эта программа рассчитана для Ddos-атак, когда вам заранее известен IP и URL атакуемого ресурса.
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-md-1 col-sm-12" id="spacecard">
+              </div>
+      
+              <div class="col-md-5 col-sm-12">
+                <div class="service-wrapper">
+      
+                  <div class="TitleWindow"> <!--Заголовок "консоли"-->
+                    <h3>Применение на практике</h3>
+                    <div class="Design"> <!--Элементы дизайна-->
+                      <p>File</p>
+                      <p>Edit</p>
+                      <p>View</p>
+                    </div>
+                  </div>
+      
+                  <div class="ConsoleWindow">  <!--текст в консоли-->
+                    <p>
+                      Для начала DoS/DdoS атаки необходимо прописать в консоль следующие команды:
+                    </p>
+
+                    <p>
+                      "sudo -s" - Получение прав суперпользователя, это необходимо для открытия некоторых утилит
+                    </p>
+
+                    <p>
+                      "[Имя утилиты] -s [ip Адресс] -t 120" - Проведение атаки происходит именно так, сначала название програмного обеспечения далее "-s" специальная опция отвечающая в этом случае за поиск цели по IP адресу, далее "-t" означает что атака будет проводиться в течении ограниченного времени (120 секунд)
+                    </p>
+                  </div>
+      
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space" id="reg"></div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">
+      <div class="center3">
+        
+        <a href="lvl.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Отмена</h2> 
+            </div>
+          </div>
+        </a>
+
+        <a href="1.1.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Начать</h2> 
+            </div>
+          </div>
+        </a>
+      </div>
+    </div> 
+
+    
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+  </div>
 </div>
 
 <footer>
@@ -211,10 +302,9 @@
             <div class="spaceSmal"></div>
           </div>
           <h3>Карта сайта</h3>
-          <p><a href="">Главная</a></p>
-          <p><a href="">Главная</a></p>
-          <p><a href="">Главная</a></p>
-          <p><a href="">Главная</a></p>
+          <p><a href="#">Главная</a></p>
+          <p><a href="lvl.html">Уровни</a></p>
+          <p><a href="about.html">О квесте</a></p>
         </div>
       </div>
 
@@ -248,7 +338,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
-    <script src="index.js"></script>
 </body>
 </html>
