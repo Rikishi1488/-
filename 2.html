@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Style1.css">
+  <title>Межсайтовый скриптинг</title>
+</head>
+<body>
+  <!--Навигация-->
+    <nav class="navbar">
+			<div class="navbar-container container">
+				<input type="checkbox">
+				<div class="hamburger-lines">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</div>
+				<ul class="menu-items">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="about.html">О квесте</a></li>
+					<li><a href="lvl.html">Уровни</a></li>
+				</ul>
+				<h1 class="logo"><img class="logo" src="img/logo.png" alt=""></h1>
+			</div>
+		</nav>
+
+<div class="container">  <!--Пробел между карточками-->
+  <div class="spaceSmal"></div>
+</div>
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+    <div class="container" id="start"><h2>XSS</h2></div>
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+
+    
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-12">
+            <div class="service-wrapper">
+
+              <div class="TitleWindow"> <!--Заголовок "консоли"-->
+                <h3>Межсайтовый скриптинг</h3>
+                <div class="Design"> <!--Элементы дизайна-->
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                </div>
+              </div>
+
+              <div class="ConsoleWindow">  <!--текст в консоли-->
+                <p>XSS (Cross-Site Scripting или межсайтовый скриптинг) — тип атаки на веб-системы, заключающийся во внедрении в выдаваемую веб-системой страницу вредоносного кода (который будет выполнен на компьютере пользователя при открытии им этой страницы) и взаимодействии этого кода с веб-сервером злоумышленника. Является разновидностью атаки «Внедрение кода».</p>
+              </div>
+
+            </div>
+          </div>
+          
+
+          <div class="col-md-1 col-sm-12">
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="service-wrapper">
+              <div class="TitleWindow">
+                <h3>Классификация</h3>
+                <div class="Design">
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                  <p>Search</p>
+                  <p>Terminal</p>
+                </div>
+              </div>
+              <div class="ConsoleWindow">
+                <p>Не существует чёткой классификации межсайтового скриптинга. Но большинство экспертов различает по крайней мере два типа XSS: </p>
+          
+                  <p>Отраженные - Атака, основанная на отражённой уязвимости, на сегодняшний день является самой распространенной XSS-атакой. Эти уязвимости появляются, когда данные, предоставленные веб-клиентом, чаще всего в параметрах HTTP-запроса или в форме HTML, исполняются непосредственно серверными скриптами для синтаксического анализа и отображения страницы результатов для этого клиента без надлежащей обработки</p> 
+                  <p>Xранимые - Хранимый XSS является наиболее разрушительным типом атаки. Хранимый XSS возможен, когда злоумышленнику удается внедрить на сервер вредоносный код, выполняющийся в браузере каждый раз при обращении к оригинальной странице.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="container">  <!--Пробел между карточками-->
+    <div class="space"></div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-sm-12">
+          <div class="service-wrapper">
+            <div class="TitleWindow">
+              <h3>Принцип атаки</h3>
+              <div class="Design">
+                <p>File</p>
+                <p>Edit</p>
+                <p>View</p>
+                <p>Search</p>
+                <p>Terminal</p>
+              </div>
+            </div>
+            <div class="ConsoleWindow">
+              <p>1 На сайте есть форма для публикации сообщения.</p> 
+              <p>2 Через эту форму хакер вместо простого текста отправляет JS-код.</p>
+              <p>3 Сообщение публикуется на странице, которая доступна всем посетителям.</p>
+              <p>4 Вредоносный код выполняется для каждого посетителя этой страницы.</p>
+              <p>5 Вредоносный скрипт вредит пользователям сайта. Например, крадёт их куки.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1 col-sm-12" id="spacecard">
+        </div>
+
+        <div class="col-md-5 col-sm-12">
+          <div class="service-wrapper">
+
+            <div class="TitleWindow"> <!--Заголовок "консоли"-->
+              <h3>В чем опасность XSS?</h3>
+              <div class="Design"> <!--Элементы дизайна-->
+                <p>File</p>
+                <p>Edit</p>
+                <p>View</p>
+              </div>
+            </div>
+
+            <div class="ConsoleWindow">  <!--текст в консоли-->
+              <p>
+                Наличие уязвимости Cross-site Scripting позволяет атакующему передать серверу исполняемый код, который будет перенаправлен браузеру пользователя. Этот код обычно создается на языках HTML /JavaScript , но могут быть использованы VBScript, ActiveX, Java, Flash, или другие поддерживаемые браузером технологии.
+              Переданный код исполняется в контексте безопасности (или зоне безопасности) уязвимого сервера. 
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  
+        <div class="container">  <!--Пробел между карточками-->
+          <div class="space" id="reg"></div>
+        </div>
+
+        <div class="section">
+          <div class="container">
+            <div class="row">
+      
+              <div class="col-md-6 col-sm-12">
+                <div class="service-wrapper">
+                  <div class="TitleWindow">
+                    <h3>В чем опасность XSS?</h3>
+                    <div class="Design">
+                      <p>File</p>
+                      <p>Edit</p>
+                      <p>View</p>
+                      <p>Search</p>
+                      <p>Terminal</p>
+                    </div>
+                  </div>
+                  <div class="ConsoleWindow">
+                    <p>Используя эти привилегии, код получает возможность читать, модифицировать или передавать важные данные, доступные с помощью браузера. У атакованного пользователя может быть скомпрометирован аккакунт (кража cookie), его браузер может быть перенаправлен на другой сервер или осуществлена подмена содержимого сервера. В результате тщательно спланированной атаки злоумышленник может использовать браузер жертвы для просмотра страниц сайта от имени атакуемого пользователя. Код может передаваться злоумышленником в URL , в заголовках Методы и структура протокола HTTP запроса (Cookie , user-agent, refferer), значениях полей форм и т.д.
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-md-1 col-sm-12" id="spacecard">
+              </div>
+      
+              <div class="col-md-5 col-sm-12">
+                <div class="service-wrapper">
+      
+                  <div class="TitleWindow"> <!--Заголовок "консоли"-->
+                    <h3>Способоы защиты</h3>
+                    <div class="Design"> <!--Элементы дизайна-->
+                      <p>File</p>
+                      <p>Edit</p>
+                      <p>View</p>
+                    </div>
+                  </div>
+      
+                  <div class="ConsoleWindow">  <!--текст в консоли-->
+                    <p>
+                      Надо обезопасить страницу, отфильтровав информацию из формы. Но как фильтровать, чтобы не потерять текст, но при этом лишить хакера возможности нам навредить?
+                      Тут помогут HTML-мнемоники.
+                    </p>
+                    <p>
+                      Мнемоника — это кодовое представление символа в HTML, который начинается со знака амперсанда «&» и завершается точкой с запятой «;».
+                    </p>
+                    <p>
+                      Теги < script > состоят из треугольных скобок, а значит, если их заменить на мнемоники, то такой текст больше не будет трактоваться браузером как HTML-тег. Мнемоники часто используются, когда надо показать пользователю фрагмент с HTML-кодом на странице. Заглянув в исходный код такой страницы можно увидеть, что вместо кавычек и скобок в этом HTML-коде находятся мнемоники.
+                    </p>
+                    </div>
+                    
+      
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space" id="reg"></div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">
+      <div class="center3">
+        
+        <a href="lvl.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Отмена</h2> 
+            </div>
+          </div>
+        </a>
+
+        <a href="2.1.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Начать</h2> 
+            </div>
+          </div>
+        </a>
+      </div>
+    </div> 
+
+    
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <h3>Карта сайта</h3>
+          <p><a href="#">Главная</a></p>
+          <p><a href="lvl.html">Уровни</a></p>
+          <p><a href="about.html">О квесте</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <div class="center">
+            <img src="img/logo.png" alt="" style="width: 125px; height: 125px;">
+          </div>
+          <div class="center">
+            <h3>Change the World...</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <h3>Автор</h3>
+          <p>Работу выполнил студент 3 курса <br> группы Ир3-19 <br> Платонов Антон Сергеевич </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Style1.css">
+  <title>SQL инъекции</title>
+</head>
+<body>
+  <!--Навигация-->
+    <nav class="navbar">
+			<div class="navbar-container container">
+				<input type="checkbox">
+				<div class="hamburger-lines">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</div>
+				<ul class="menu-items">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="about.html">О квесте</a></li>
+					<li><a href="lvl.html">Уровни</a></li>
+				</ul>
+				<h1 class="logo"><img class="logo" src="img/logo.png" alt=""></h1>
+			</div>
+		</nav>
+
+<div class="container">  <!--Пробел между карточками-->
+  <div class="spaceSmal"></div>
+</div>
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+    <div class="container" id="start"><h2>SQL инъекции</h2></div>
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+
+    
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-12">
+            <div class="service-wrapper">
+
+              <div class="TitleWindow"> <!--Заголовок "консоли"-->
+                <h3>SQL инъекции</h3>
+                <div class="Design"> <!--Элементы дизайна-->
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                </div>
+              </div>
+
+              <div class="ConsoleWindow">  <!--текст в консоли-->
+                <p>Суть уязвимости — выполнение произвольного запроса к базе данных. Запрос может быть любым: на чтение, запись, модификацию и удаление каких-либо записей. А ведь этими угрозами все не ограничивается, так как при определённых обстоятельствах можно добраться и до чтения/записи локальных файлов. Все зависит от целей, которые преследует злоумышленник, от используемой системы и того, как она сконфигурирована.</p>
+              </div>
+
+            </div>
+          </div>
+          
+
+          <div class="col-md-1 col-sm-12">
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <div class="service-wrapper">
+              <div class="TitleWindow">
+                <h3>Типы SQL инъекций</h3>
+                <div class="Design">
+                  <p>File</p>
+                  <p>Edit</p>
+                  <p>View</p>
+                  <p>Search</p>
+                  <p>Terminal</p>
+                </div>
+              </div>
+              <div class="ConsoleWindow">
+                <p>Существует несколько типов SQL инъекций:</p>
+                <ul>
+                  <li>
+                    Классическая SQL Injection — простая и легкая в эксплуатации. Позволяет злоумышленнику атаковать БД и сразу видеть результат атаки. В последнее время встречается нечасто.
+                  </li>
+                  <li>
+                    Error-based SQL Injection — чуть более сложный и затратный по времени тип атаки, позволяющий, на основе выводимых ошибок СУБД, получить информацию о всей БД и хранящиеся в ней данные. Эксплуатируется, если кто-то в спешке забыл отключить вывод ошибок.
+                  </li>
+                  <li>
+                    Boolean-based SQL Injection — одна из «слепых» инъекций. Суть атаки сводится к добавлению специального подзапроса в уязвимый параметр, на который БД будет отвечать либо True, либо, неожиданно, False. Атака не позволяет сразу вывести все данные БД «на экран» злоумышленнику, но позволяет, перебирая параметры раз за разом, получить содержимое БД, хотя для этого потребуется временной отрезок соизмеримый с содержимым БД .
+                  </li>
+                  <li>
+                    Time-based SQL Injection — следующая из «слепых» инъекций. В данном случае злоумышленник добавляет подзапрос, приводящий к замедлению или паузе работы БД при некоторых условиях. Таким образом, атакующий, сравнивая время ответа на «True» и на «False» запросы, символ за символом может получить все содержимое БД, но времени уйдет на это больше, чем в случае эксплуатации Boolean-based атаки.
+                  </li>
+                  <li>
+                    Out-of-band SQL Injection — редкий тип. Атака может быть успешна только при определенных обстоятельствах, например, если сервер БД может генерировать DNS- или HTTP-запросы, что встречается нечасто. Также, как и Blind SQL, позволяет посимвольно собирать информацию о хранящихся там данных.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="container">  <!--Пробел между карточками-->
+    <div class="space"></div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-sm-12">
+          <div class="service-wrapper">
+            <div class="TitleWindow">
+              <h3>Способы защиты</h3>
+              <div class="Design">
+                <p>File</p>
+                <p>Edit</p>
+                <p>View</p>
+                <p>Search</p>
+                <p>Terminal</p>
+              </div>
+            </div>
+            <div class="ConsoleWindow">
+              <p>Несмотря на всю серьёзность уязвимости, защита от атаки весьма проста: при разработке приложения необходимо уделить особое внимание фильтрации ввода и настройке прав. Обязательно отключайте вывод ошибок на «рабочей» системе, ни к чему пользователю такая чувствительная информация. И после каких-либо изменений в приложении проводить ASV-сканирования для гарантии. А в идеале, ввести данные действия в Software Development Life Cycle.</p>
+              <p>Дополнительной мерой является установка Web Application Firewall (WAF) систем. Именно подобный класс решений заточен на борьбу с выше описанными атаками и, надо сказать, весьма хорош.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1 col-sm-12" id="spacecard">
+        </div>
+
+        <div class="col-md-5 col-sm-12">
+          <div class="service-wrapper">
+
+            <div class="TitleWindow"> <!--Заголовок "консоли"-->
+              <h3>Проверка уязвимости</h3>
+              <div class="Design"> <!--Элементы дизайна-->
+                <p>File</p>
+                <p>Edit</p>
+                <p>View</p>
+              </div>
+            </div>
+
+            <div class="ConsoleWindow">  <!--текст в консоли-->
+              <p>Вводим одинарные и двойные ковычки, точку с запятой и следим за реакцией</p>
+              <p>Вводим булевые запросы типа "OR 1=1", "OR 1=2" и следим за реакцией</p>
+              <p>Вводим запросы которые генерируют задержку</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">
+      <div class="center3">
+        
+        <a href="lvl.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Отмена</h2> 
+            </div>
+          </div>
+        </a>
+
+        <a href="3.1.html">
+          <div class="btn btn-primary">
+            <div class="center">
+              <h2 id="regBtn1">Начать</h2> 
+            </div>
+          </div>
+        </a>
+      </div>
+    </div> 
+
+    
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="space"></div>
+    </div>
+
+    <div class="container">  <!--Пробел между карточками-->
+      <div class="spaceSmal"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <h3>Карта сайта</h3>
+          <p><a href="#">Главная</a></p>
+          <p><a href="lvl.html">Уровни</a></p>
+          <p><a href="about.html">О квесте</a></p>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <div class="center">
+            <img src="img/logo.png" alt="" style="width: 125px; height: 125px;">
+          </div>
+          <div class="center">
+            <h3>Change the World...</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-12" >
+        <div class="service-wrapper" style="height: 250px;">
+          <div class="container">  <!--Пробел между карточками-->
+            <div class="spaceSmal"></div>
+          </div>
+          <h3>Автор</h3>
+          <p>Работу выполнил студент 3 курса <br> группы Ир3-19 <br> Платонов Антон Сергеевич </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>
