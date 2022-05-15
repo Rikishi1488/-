@@ -189,6 +189,7 @@ nav
     white-space:normal;
     overflow:auto;
     vertical-align: middle;
+    min-height: 150px;
 }
 
 .ConsoleWindow4::-webkit-scrollbar
@@ -325,13 +326,14 @@ nav
     border-style: none;
     border-color:rgba(0, 0, 0, 0);
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     padding-bottom: 0;
     font-weight: 500;
     font-size: larger;
     outline: none;
-	-moz-appearance: none;
-  resize: none;
+	  -moz-appearance: none;
+    min-height: 150px;
+    resize: none;
 }
 
 .ConsoleWindow4 textarea::-webkit-scrollbar {
