@@ -46,6 +46,7 @@
     </div>
 
 
+
     <div class="section">
         <div class="container">
             <div class="row">
@@ -66,16 +67,14 @@
                         <div class="ConsoleWindow">
                             <!--текст в консоли-->
                             <p>
-                                Попробуйте проверить наличие уязвимости вписав следующие команды:
+                                В основном, недостатки системы аутентификации проявляються в полной мере из-за ненадёжных паролей, существут целые базы данных с самыми частыми паролями.
+                                Если пароль достаточно надёжен, то существует метод "Грубой силы", программа просто попытаеться перебрать все возможные символы, в попытках подобрать верный код 
                             </p>
-                            <ul>
-                                <li>Test'</li>
-                                <li>Test""</li>
-                                <li>Test'OR 1=1 #</li>
-                                <li>Test'OR 1=2 #</li>
-                            </ul>
+                            <p>
+                                Придумайте пароль и напишите в окно выполнение. 
+                                Вы получите время, которое в среднем затрачиваеться на взлом данного пароля
+                            </p>
                         </div>
-
                     </div>
                 </div>
 
@@ -96,12 +95,7 @@
                             </div>
                         </div>
                         <div class="ConsoleWindow4">
-                            <textarea placeholder="Введите логин"></textarea>
-                            <div id="Btn1" class="btn btn-primary" style="margin-left: 32.5%; margin-bottom: 20px; margin-top: 20px;">
-                                <div class="center">
-                                    <h2 >Далее</h2>
-                                </div>
-                            </div>
+                            <textarea placeholder="Введите пароль"></textarea>
                         </div>
                     </div>
                 </div>
@@ -117,7 +111,7 @@
     <div class="container">
         <div class="center3">
 
-            <a href="3.html">
+            <a href="4.html">
                 <div class="btn btn-primary">
                     <div class="center">
                         <h2 id="regBtn1">Отмена</h2>
@@ -143,26 +137,128 @@
         $(document).ready(function() {
 
                     var Btn = $('#Btn');
-                    var Btn1 = $('#Btn1');
-                    Btn1.hide();
                     Btn.on('click', function(e) 
                     {
+                                //var CummonPasswd = ['password', 'qwerty','asdfgh', 'zxcvbn']; Мб потом доведу до ума
+                                var EngAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p", "q","r","s","t","v","w","x","y","z"];
+                                var EngAlphabetPresent = false;
+
+                                var Numbers = ["0","1","2","3","4","5","6","7","8","9"];
+                                var NumbersPresent = false;
+
+                                var RuAlphabet = ["а","б","в","г","д","е","ё","ж","з","и","й","к","л","м","н","о","п","р","с","у","ф","х","ч","щ","ъ", "ь","э", "ю","я"];
+                                var RuAlphabetPresent = false;
+
+                                var Symbol = ["!", "?", "#", "@", "%","&", "*", "(", ")", "+", "-", "^", ":", ";", "/"];
+                                var SymbolPresent = false;
+
 
                                 var Text = $('textarea').val();
-                                //document.getElementById("testquestElement").innerHTML = Text;
 
-                                var Text = $('textarea').val();
-                                if ($('textarea').val() == "Test'OR 1=1 #")
+                                var Length = Text.length;
+                                console.log(Text)
+                                console.log(Length)
+
+                                var NumberOfСombinations = 0
+                                /*
+                                for (let i = 0; i < 25; i++)
                                 {
-                                    $('textarea').val("Test'OR 1=1 #\nFailure is always an option\n\nSELECT username FROM accounts WHERE username='Test'OR 1=1 #'\n\nError querying user account\n\nИсходя из полученного сообщения о ошибке мы узнали что в базе данных существует строка username в таблице accounts. Теперь, обнаружив в базе данных таблицу с именем accounts, мы, естественно, заходим заполучить ее содержимое себе. Но не будем копировать все данные просто в файле, а реплицируем содержимое таблиц в основанную на файлах базу данных SQLite на локальной машине.\n\n$ python sqlmap.py -u http://www.site.com/vuln.php?id=1 --random-agent --tor --dump -D testdb -T users --replicate \n\nСканеру не составит труда определить названия столбцов для таблицы accounts и вытащить из нее все записи:\n[INFO] fetching columns for table 'accounts' on database 'testdb'\n[INFO] fetching entries for table 'accounts' on database 'testdb'\nDatabase: testdb\nTable: accounts\n[2 entries]\n+----+--------+------------+\n|  id   | username | passwd |\n|   1   |  root          | bunny   |\n|   2   | wu             | ming    |\n+----+--------+------------+\nТаким образом мы получим дамп базы данных в файле testdb.sqlite3 в формате SQLite. Фишка в том, что в при таком раскладе мы не только можем посмотреть данные, но еще и выполнить к ней любые запросы, используя возможности SQLite")                                
-                                    Btn1.show();
-                                }                               
-                    });
+                                    if (Text.includes(EngAlphabet[i]) == true);
+                                    {
+                                        EngAlphabetPresent = true;
+                                    };
+                                };
+                                */
 
-                    Btn1.on('click', function(e) 
-                    {
-                        window.location.href = 'lvl.html';
-                    });
+                                for (let i = 0; i < EngAlphabet.length; i++)
+                                {
+                                    for (let d = 0; d < Length; d++)
+                                    {
+                                        console.log(typeof Text[d])
+                                        console.log(typeof EngAlphabet[i])
+                                        if (Text[d] == EngAlphabet[i])
+                                        {
+                                            EngAlphabetPresent = true;
+                                        }
+                                        else
+                                        {
+                                            EngAlphabetPresent = false;
+                                        }
+                                    }
+                                };
+
+                                for (let i = 0; i < Numbers.length; i++)
+                                {
+                                    for (let d = 0; d < Length; d++)
+                                    {
+                                        if (Text[d] == Numbers[i])
+                                        {
+                                            NumbersPresent = true;
+                                        }
+                                        else
+                                        {
+                                            NumbersPresent = false;
+                                        }
+                                    }
+                                };
+
+                                for (let i = 0; i < RuAlphabet.length; i++)
+                                {
+                                    for (let d = 0; d < Length; d++)
+                                    {
+                                        if (Text[d] == RuAlphabet[i])
+                                        {
+                                            RuAlphabetPresent = true;
+                                        }
+                                        else
+                                        {
+                                            RuAlphabetPresent = false;
+                                        }
+                                    }
+                                };
+
+                                for (let i = 0; i < Symbol.length; i++)
+                                {
+                                    for (let d = 0; d < Length; d++)
+                                    {
+                                        if (Text[d] == Symbol[i])
+                                        {
+                                            SymbolPresent = true;
+                                        }
+                                        else
+                                        {
+                                            SymbolPresent = false;
+                                        }
+                                    }
+                                };
+
+                                if (EngAlphabetPresent == true)
+                                {
+                                    NumberOfСombinations += 26;
+                                    console.log('Eng' + EngAlphabetPresent);
+                                }
+
+                                if (NumbersPresent == true)
+                                {
+                                    NumberOfСombinations += 10;
+                                    console.log('Num' + NumbersPresent);
+                                }
+                                      
+                                if (RuAlphabetPresent == true)
+                                {
+                                    NumberOfСombinations += 33;
+                                    console.log('Ru' + RuAlphabetPresent);
+                                }
+
+                                if (SymbolPresent == true)
+                                {
+                                    NumberOfСombinations += 17;
+                                    console.log('Sym' + SymbolPresent);
+                                }
+
+                                $('textarea').val(Math.pow(NumberOfСombinations, Length) + " Комбинаций" + '\n' + "Пароль будет скомпрометирован за " ); 
+                    });         
+                        //window.location.href = 'lvl.html';
         });
     </script>
 </body>
