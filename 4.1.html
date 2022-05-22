@@ -160,31 +160,21 @@
                                 console.log(Length)
 
                                 var NumberOfСombinations = 0
-                                /*
-                                for (let i = 0; i < 25; i++)
-                                {
-                                    if (Text.includes(EngAlphabet[i]) == true);
-                                    {
-                                        EngAlphabetPresent = true;
-                                    };
-                                };
-                                */
 
                                 for (let i = 0; i < EngAlphabet.length; i++)
                                 {
                                     for (let d = 0; d < Length; d++)
                                     {
-                                        console.log(typeof Text[d])
-                                        console.log(typeof EngAlphabet[i])
                                         if (Text[d] == EngAlphabet[i])
                                         {
                                             EngAlphabetPresent = true;
                                         }
                                         else
-                                        {
-                                            EngAlphabetPresent = false;
+                                        {brk = true;
+                                            break;
                                         }
                                     }
+                                    if (brk) {break;}
                                 };
 
                                 for (let i = 0; i < Numbers.length; i++)
@@ -194,10 +184,6 @@
                                         if (Text[d] == Numbers[i])
                                         {
                                             NumbersPresent = true;
-                                        }
-                                        else
-                                        {
-                                            NumbersPresent = false;
                                         }
                                     }
                                 };
@@ -210,10 +196,6 @@
                                         {
                                             RuAlphabetPresent = true;
                                         }
-                                        else
-                                        {
-                                            RuAlphabetPresent = false;
-                                        }
                                     }
                                 };
 
@@ -224,10 +206,6 @@
                                         if (Text[d] == Symbol[i])
                                         {
                                             SymbolPresent = true;
-                                        }
-                                        else
-                                        {
-                                            SymbolPresent = false;
                                         }
                                     }
                                 };
@@ -256,7 +234,42 @@
                                     console.log('Sym' + SymbolPresent);
                                 }
 
-                                $('textarea').val(Math.pow(NumberOfСombinations, Length) + " Комбинаций" + '\n' + "Пароль будет скомпрометирован за " ); 
+                                let Time = (Math.pow(NumberOfСombinations, Length)/3)
+                                let date = " Секунд";
+                                let Result;
+
+                                if (Time > 60)
+                                {
+                                    Result = Time/60;
+                                    date = " Минут";
+                                    if (Result > 60)
+                                    {
+                                        Result = Result/60;
+                                        date = " Часов";
+                                        if (Result > 24)
+                                        {
+                                            Result = Result/24;
+                                            date = " Дней";
+                                            if (Result > 7)
+                                            {
+                                                Result = Result/7;
+                                                date = " Недель";
+                                                if (Result > 5)
+                                                {
+                                                    Result = Result/5;
+                                                    date = " Месяцев";
+                                                    if (Result > 12)
+                                                    {
+                                                        Result = Result/12;
+                                                        date = " Лет";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                $('textarea').val(Math.pow(NumberOfСombinations, Length) + " Комбинаций" + '\n' + "Пароль будет скомпрометирован за " + Result + date); 
                     });         
                         //window.location.href = 'lvl.html';
         });
