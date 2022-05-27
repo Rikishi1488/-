@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   $('.form-panel.two').not('.form-panel.two.active').on('click', function(e) {
     e.preventDefault();
-
+    
     $('.form-toggle').addClass('visible');
     $('.form-panel.one').addClass('hidden');
     $('.form-panel.two').addClass('active');
